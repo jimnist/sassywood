@@ -1,0 +1,37 @@
+// This import applies a global reset to any page that imports this stylesheet.
+// To configure blueprint, edit the partials/_base.sass file.
+@import partials/_base.sass
+@import blueprint/screen.sass
+@import blueprint/modules/scaffolding.sass
+@import compass/reset.sass
+@import compass/utilities.sass
+
++blueprint-typography("body.blueprint")
+
+body.blueprint
+  +blueprint-scaffolding
+  .container
+    +container
+
+body#index
+  #header
+    +column(18, true)
+    :background-color #ccccc9
+    :height 117px
+    h1
+      :float left
+    img
+      :margin-left 42px
+    #site-actions
+      :float right
+      +horizontal-list
+  #navigation
+    +column(4)
+  #main-content
+    +column(13,true)
+  #footer
+    +column(18, true)
+    #legalese
+      +column(14)
+    #footer-links
+      +column(4,true)
