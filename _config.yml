@@ -13,3 +13,4 @@ maruku:
 exclude:
   - config.rb
   - rakefile
+  - nbproject/
