@@ -1,7 +1,10 @@
+##
+# configuration for sassywood
+#
 destination: ./_site
 auto:        false
 lsi:         false
-server_port: 4000
+server_port: 4003
 pygments:    false
 markdown:    maruku
 permalink:   date
@@ -13,4 +16,4 @@ maruku:
 exclude:
   - config.rb
   - rakefile
-  - nbproject/
+  - nbproject

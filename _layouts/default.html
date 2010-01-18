@@ -2,6 +2,9 @@
 <html>
     <head>
         <title>{{ page.title }}</title>
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="alternate" type="application/atom+xml" title="Recent Entries" href="http://feeds.feedburner.com/sassywood" />
         <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
         <link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" />
         <!--[if lt IE 8]>
@@ -12,22 +15,19 @@
     <body id="index" class="blueprint">
         <div class="container">
             <div id="header">
-                <img class="header-logo" alt="sassywood" src="/images/sassywood.png">
-                <ul id="site-actions">
-                    <li><a href="#">Login</a></li>
-                    <li><a href="#">Register</a></li>
-                    <li><a href="#">Aboot</a></li>
-                </ul>
+                <a href="index.html"><img class="header-logo" alt="sassywood" src="/images/sassywood.png"></a>
             </div>
+            <div id="leftsubheader">&nbsp;</div>
+            <div id="rightsubheader">search goes here</div>
             <div id="navigation">
-                <h3>Related Content</h3>
+                <h3>miscellany</h3>
                 <ul>
                     <li><a href="#">Related Page #1</a></li>
                     <li><a href="#">Related Page #2</a></li>
                     <li><a href="#">Related Page #3</a></li>
                     <li><a href="#">Related Page #4</a></li>
                 </ul>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
             </div>
             <div id="main-content">
                 {{ content }}
@@ -37,16 +37,8 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </div>
             <div id="footer">
-                <p id="legalese">Copyright &copy; 2010.</p>
-                <div id="footer-links">
-                    <h3>Site Links</h3>
-                    <ul>
-                        <li><a href="#">Important Site Area</a></li>
-                        <li><a href="#">Related Page #2</a></li>
-                        <li><a href="#">Related Page #3</a></li>
-                        <li><a href="#">Related Page #4</a></li>
-                    </ul>
-                </div>
+                <div id="legalese">copyright &copy; 2010</div>
+                <div id="subscribe"><a href="http://feeds.feedburner.com/sassywood"></a></div>
             </div>
         </div>
     </body>

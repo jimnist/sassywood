@@ -15,23 +15,32 @@ body.blueprint
 
 body#index
   #header
-    +column(18, true)
+    +column(8, true)
     :background-color #ccccc9
     :height 117px
     h1
       :float left
     img
-      :margin-left 42px
+      :margin-left 27px
     #site-actions
       :float right
       +horizontal-list
-  #navigation
+  #leftsubheader
     +column(4)
+    :height 23px
+    span
+  #rightsubheader
+    +column(4, true)
+    :height 23px
+    :text-align right
+  #navigation
+    +column(2)
   #main-content
-    +column(13,true)
+    +column(6,true)
   #footer
-    +column(18, true)
+    +column(8, true)
     #legalese
-      +column(14)
-    #footer-links
+      +column(4)
+    #subscribe
       +column(4,true)
+      :text-align right

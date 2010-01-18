@@ -61,28 +61,32 @@ body.blueprint .loud { color: #111111; }
 
 body.blueprint .box { padding: 1.5em; margin-bottom: 1.5em; background: #E5ECF9; }
 body.blueprint div.border { padding-right: 4px; margin-right: 5px; border-right: 1px solid #eeeeee; }
-body.blueprint div.colborder { padding-right: 25px; margin-right: 26px; border-right: 1px solid #eeeeee; }
+body.blueprint div.colborder { padding-right: 48px; margin-right: 49px; border-right: 1px solid #eeeeee; }
 body.blueprint hr { background: #dddddd; color: #dddddd; clear: both; float: none; width: 100%; height: .1em; margin: 0 0 1.45em; border: none; }
 body.blueprint hr.space { background: #dddddd; color: #dddddd; clear: both; float: none; width: 100%; height: .1em; margin: 0 0 1.45em; border: none; background: #fff; color: #fff; }
-body.blueprint .container { width: 730px; margin: 0 auto; overflow: hidden; display: inline-block; }
+body.blueprint .container { width: 698px; margin: 0 auto; overflow: hidden; display: inline-block; }
 body.blueprint .container { display: block; }
 
-body#index #header { display: inline; float: left; margin-right: 0; width: 730px; background-color: #ccccc9; height: 117px; }
+body#index #header { display: inline; float: left; margin-right: 0; width: 698px; background-color: #ccccc9; height: 117px; }
 * html body#index #header { overflow-x: hidden; }
 body#index #header h1 { float: left; }
-body#index #header img { margin-left: 42px; }
+body#index #header img { margin-left: 27px; }
 body#index #header #site-actions { float: right; margin: 0; padding: 0; border: 0; outline: 0; overflow: hidden; display: inline-block; }
 body#index #header #site-actions { display: block; }
 body#index #header #site-actions li { list-style-type: none; margin-left: 0px; white-space: nowrap; display: inline; float: left; padding-left: 4px; padding-right: 4px; }
 body#index #header #site-actions li.first { padding-left: 0px; }
 body#index #header #site-actions li.last { padding-right: 0px; }
-body#index #navigation { display: inline; float: left; margin-right: 10px; width: 154.444px; }
+body#index #leftsubheader { display: inline; float: left; margin-right: 10px; width: 344px; height: 23px; }
+* html body#index #leftsubheader { overflow-x: hidden; }
+body#index #rightsubheader { display: inline; float: left; margin-right: 0; width: 344px; height: 23px; text-align: right; }
+* html body#index #rightsubheader { overflow-x: hidden; }
+body#index #navigation { display: inline; float: left; margin-right: 10px; width: 167px; }
 * html body#index #navigation { overflow-x: hidden; }
-body#index #main-content { display: inline; float: left; margin-right: 0; width: 524.444px; }
+body#index #main-content { display: inline; float: left; margin-right: 0; width: 521px; }
 * html body#index #main-content { overflow-x: hidden; }
-body#index #footer { display: inline; float: left; margin-right: 0; width: 730px; }
+body#index #footer { display: inline; float: left; margin-right: 0; width: 698px; }
 * html body#index #footer { overflow-x: hidden; }
-body#index #footer #legalese { display: inline; float: left; margin-right: 10px; width: 565.556px; }
+body#index #footer #legalese { display: inline; float: left; margin-right: 10px; width: 344px; }
 * html body#index #footer #legalese { overflow-x: hidden; }
-body#index #footer #footer-links { display: inline; float: left; margin-right: 0; width: 154.444px; }
-* html body#index #footer #footer-links { overflow-x: hidden; }
+body#index #footer #subscribe { display: inline; float: left; margin-right: 0; width: 344px; text-align: right; }
+* html body#index #footer #subscribe { overflow-x: hidden; }
