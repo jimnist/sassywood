@@ -1,0 +1,9 @@
+---
+layout: post
+title: alien hunters unite
+---
+h1. {{ page.title }}
+
+p(meta). {{ post. }} - Charlottesville
+
+alien hunting with coon hounds is all the rage here in Virginia. get a sticker of your very own for your pickup truck back window.

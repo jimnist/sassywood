@@ -1,0 +1,5 @@
+---
+layout: post
+title: welcome to sassywood
+---
+welcome to sassywood.org a blog of art, code, and rants.

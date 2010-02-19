@@ -1,0 +1,5 @@
+---
+layout: post
+title: macpaint textures
+---
+remember the old days, after ascii and dot matrix, but before photoshop? you could only dream in these 38 macpaint textures.
