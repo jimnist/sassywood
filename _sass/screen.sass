@@ -13,7 +13,9 @@ body.blueprint
   .container
     +container
 
-body#index
+body#default
+  .container
+    :border 1px solid #ccccc9
   #header
     +column(8, true)
     :background-color #ccccc9
@@ -37,8 +39,11 @@ body#index
     +column(2)
   #main-content
     +column(6,true)
+    :min-height 444px
   #footer
     +column(8, true)
+    span
+      :padding 6px
     #legalese
       +column(4)
     #subscribe

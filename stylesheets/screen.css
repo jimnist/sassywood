@@ -67,26 +67,28 @@ body.blueprint hr.space { background: #dddddd; color: #dddddd; clear: both; floa
 body.blueprint .container { width: 698px; margin: 0 auto; overflow: hidden; display: inline-block; }
 body.blueprint .container { display: block; }
 
-body#index #header { display: inline; float: left; margin-right: 0; width: 698px; background-color: #ccccc9; height: 117px; }
-* html body#index #header { overflow-x: hidden; }
-body#index #header h1 { float: left; }
-body#index #header img { margin-left: 27px; }
-body#index #header #site-actions { float: right; margin: 0; padding: 0; border: 0; outline: 0; overflow: hidden; display: inline-block; }
-body#index #header #site-actions { display: block; }
-body#index #header #site-actions li { list-style-type: none; margin-left: 0px; white-space: nowrap; display: inline; float: left; padding-left: 4px; padding-right: 4px; }
-body#index #header #site-actions li.first { padding-left: 0px; }
-body#index #header #site-actions li.last { padding-right: 0px; }
-body#index #leftsubheader { display: inline; float: left; margin-right: 10px; width: 344px; height: 23px; }
-* html body#index #leftsubheader { overflow-x: hidden; }
-body#index #rightsubheader { display: inline; float: left; margin-right: 0; width: 344px; height: 23px; text-align: right; }
-* html body#index #rightsubheader { overflow-x: hidden; }
-body#index #navigation { display: inline; float: left; margin-right: 10px; width: 167px; }
-* html body#index #navigation { overflow-x: hidden; }
-body#index #main-content { display: inline; float: left; margin-right: 0; width: 521px; }
-* html body#index #main-content { overflow-x: hidden; }
-body#index #footer { display: inline; float: left; margin-right: 0; width: 698px; }
-* html body#index #footer { overflow-x: hidden; }
-body#index #footer #legalese { display: inline; float: left; margin-right: 10px; width: 344px; }
-* html body#index #footer #legalese { overflow-x: hidden; }
-body#index #footer #subscribe { display: inline; float: left; margin-right: 0; width: 344px; text-align: right; }
-* html body#index #footer #subscribe { overflow-x: hidden; }
+body#default .container { border: 1px solid #ccccc9; }
+body#default #header { display: inline; float: left; margin-right: 0; width: 698px; background-color: #ccccc9; height: 117px; }
+* html body#default #header { overflow-x: hidden; }
+body#default #header h1 { float: left; }
+body#default #header img { margin-left: 27px; }
+body#default #header #site-actions { float: right; margin: 0; padding: 0; border: 0; outline: 0; overflow: hidden; display: inline-block; }
+body#default #header #site-actions { display: block; }
+body#default #header #site-actions li { list-style-type: none; margin-left: 0px; white-space: nowrap; display: inline; float: left; padding-left: 4px; padding-right: 4px; }
+body#default #header #site-actions li.first { padding-left: 0px; }
+body#default #header #site-actions li.last { padding-right: 0px; }
+body#default #leftsubheader { display: inline; float: left; margin-right: 10px; width: 344px; height: 23px; }
+* html body#default #leftsubheader { overflow-x: hidden; }
+body#default #rightsubheader { display: inline; float: left; margin-right: 0; width: 344px; height: 23px; text-align: right; }
+* html body#default #rightsubheader { overflow-x: hidden; }
+body#default #navigation { display: inline; float: left; margin-right: 10px; width: 167px; }
+* html body#default #navigation { overflow-x: hidden; }
+body#default #main-content { display: inline; float: left; margin-right: 0; width: 521px; min-height: 444px; }
+* html body#default #main-content { overflow-x: hidden; }
+body#default #footer { display: inline; float: left; margin-right: 0; width: 698px; }
+* html body#default #footer { overflow-x: hidden; }
+body#default #footer span { padding: 6px; }
+body#default #footer #legalese { display: inline; float: left; margin-right: 10px; width: 344px; }
+* html body#default #footer #legalese { overflow-x: hidden; }
+body#default #footer #subscribe { display: inline; float: left; margin-right: 0; width: 344px; text-align: right; }
+* html body#default #footer #subscribe { overflow-x: hidden; }

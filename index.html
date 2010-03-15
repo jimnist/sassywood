@@ -2,10 +2,16 @@
 layout: default
 title: sassywood
 ---
+<div id="navigation">
+    <h3>miscellany</h3>
+    <ul>
+        <li><a href="#">Related Page #1</a></li>
+        <li><a href="#">Related Page #2</a></li>
+    </ul>
+</div>
 
-Sassy, Woodie!
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
+<ul class="posts">
+{% for post in site.posts %}
+    <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+{% endfor %}
+</ul>

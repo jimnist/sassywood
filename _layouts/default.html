@@ -12,30 +12,35 @@
         <![endif]-->
     </head>
 
-    <body id="index" class="blueprint">
+    <body id="default" class="blueprint">
         <div class="container">
             <div id="header">
-                <a href="index.html"><img class="header-logo" alt="sassywood" src="/images/sassywood.png"></a>
+                <a href="/index.html"><img class="header-logo" alt="sassywood" src="/images/sassywood.png"></a>
             </div>
             <div id="leftsubheader">&nbsp;</div>
             <div id="rightsubheader">search goes here</div>
-            <div id="navigation">
-                <h3>miscellany</h3>
-                <ul>
-                    <li><a href="#">Related Page #1</a></li>
-                    <li><a href="#">Related Page #2</a></li>
-                    <li><a href="#">Related Page #3</a></li>
-                    <li><a href="#">Related Page #4</a></li>
-                </ul>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
-            </div>
-            <div id="main-content">
-                {{ content }}
-            </div>
+            <div id="main-content">{{ content }}</div>
             <div id="footer">
-                <div id="legalese">copyright &copy; 2010</div>
-                <div id="subscribe"><a href="http://feeds.feedburner.com/sassywood"></a></div>
+                <div id="legalese"><span>&copy; 2010</span></div>
+                <div id="subscribe">
+                    <span>
+                        <a href="http://feeds.feedburner.com/sassywood">
+                            subscribe &nbsp;<img src="/images/rss.gif" alt="subscribe to RSS feed" />
+                        </a>
+                    </span>
+                </div>
             </div>
         </div>
+
+    <script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+    try {
+    var pageTracker = _gat._getTracker("UA-13116140-1");
+    pageTracker._trackPageview();
+    } catch(err) {}</script>
+    
     </body>
 </html>
