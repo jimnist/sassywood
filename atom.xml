@@ -19,7 +19,7 @@ layout; nil
     <title>{{ post.title }}</title>
     <link rel='alternate' type='text/html' href='http://sassywood.org{{ post.url }}'/>
     <updated>{{ post.date | date_to_xmlschema }}</updated>
-    <id>http://tom.preston-werner.com{{ post.id }}</id>
+    <id>http://sassywood.org{{ post.id }}</id>
     <content type="html">{{ post.content | xml_escape }}</content>
   </entry>
   {% endfor %}
