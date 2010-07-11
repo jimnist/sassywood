@@ -1,6 +1,6 @@
 // This import applies a global reset to any page that imports this stylesheet.
 // To configure blueprint, edit the partials/_base.sass file.
-@import "partials/_base.sass";
+@import "partials/_base.scss";
 @import "blueprint/screen.sass";
 @import "blueprint/modules/scaffolding.sass";
 @import "compass/reset.sass";
