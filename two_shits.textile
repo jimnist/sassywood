@@ -1,0 +1,5 @@
+---
+layout: default
+title: copyright
+---
+all this content copyrighted under the two shits license. take what you want. i could give two shits.

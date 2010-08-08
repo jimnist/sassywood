@@ -8,7 +8,7 @@
 
 USER_NAME = "git8"
 HOST_NAME = "jimnist.com"
-SITE_NAME = "bankofbs.org"
+SITE_NAME = "sassywood.org"
 
 desc "build and run the site locally"
 task :run => :build do
@@ -19,7 +19,7 @@ end
 desc "build _site locally"
 task :build => :delete do
   puts "building _site"
-  system('compass')
+  system('compass compile')
   system('jekyll')
 end
 
@@ -40,23 +40,9 @@ task :rsync => :build do
   system("rsync -avrz _site/ #{USER_NAME}@#{HOST_NAME}:#{SITE_NAME}")
 end
 
-namespace :dev do
-
-  desc "run compass watching for changes"
-  task :compass do
-    system("compass --watch")
-  end
-
-  desc "run jekyll server watching for changes"
-  task :jekyll do
-    system("jekyll --server --auto")
-  end
-
-  ###
-  # this (will) has tasks to publish, run the dev server, etc
-  desc "run jekyll and compass dev servers"
-  task :both do
-    system "./_scripts/dev_servers.sh"
-  end
-
+###
+# this (will) has tasks to publish, run the dev server, etc
+desc "run jekyll and compass dev servers"
+task :dev do
+  system "./_scripts/dev_servers.sh"
 end
