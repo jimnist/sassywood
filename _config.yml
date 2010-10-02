@@ -4,4 +4,4 @@
 server_port: 4003
 exclude:
   - config.rb
-  - rakefile
+  - Rakefile

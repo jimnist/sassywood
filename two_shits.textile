@@ -2,4 +2,8 @@
 layout: default
 title: copyright
 ---
-all this content copyrighted under the two shits license. take what you want. i could give two shits.
+all content copyrighted under the Two Shits License. 
+
+take what you want. 
+
+i could give two shits.
