@@ -13,36 +13,37 @@ SITE_NAME = "sassywood.org"
 desc "build and run the site locally"
 task :run => :build do
   puts "running server locally"
-  system('jekyll --server')
+  system('jekyll --server ./jekyll ./site')
 end
 
 desc "build _site locally"
 task :build => :delete do
-  puts "building _site"
+  puts "building jekyll/_site"
   system('compass compile')
-  system('jekyll')
+  system('jekyll ./jekyll ./site')
 end
 
-desc "deploy #{SITE_NAME} to dreamhost"
+desc "deploy #{SITE_NAME} to AWS"
 task :deploy => :rsync do
   puts "dev site deployed"
+  puts "TODO"
 end
 
-desc "deletes _site"
+desc "deletes jekyll/_site"
 task :delete do
   puts "deleting _site"
-  system('rm -r _site')
+  system('rm -r jekyll/_site')
   puts "deleting _site complete"
 end
 
-desc "rsync _site"
+desc "rsync site"
 task :rsync => :build do
-  system("rsync -avrz _site/ #{USER_NAME}@#{HOST_NAME}:#{SITE_NAME}")
+  system("rsync -avrz site/ #{USER_NAME}@#{HOST_NAME}:#{SITE_NAME}")
 end
 
 ###
 # this (will) has tasks to publish, run the dev server, etc
 desc "run jekyll and compass dev servers"
 task :dev do
-  system "./_scripts/dev_servers.sh"
+  system "./scripts/dev_servers.sh"
 end

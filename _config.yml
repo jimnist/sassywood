@@ -1,7 +1,0 @@
-##
-# configuration for sassywood
-#
-server_port: 4003
-exclude:
-  - config.rb
-  - Rakefile
