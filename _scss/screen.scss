@@ -8,44 +8,63 @@
 
 @include blueprint-typography(unquote("body.blueprint"));
 
+$border_color: #ccccc9;
+
 body.blueprint {
   @include blueprint-scaffolding;
   .container {
-    @include container; } }
+    @include container; 
+  } 
+}
 
-body#default {
-  .container {
-    border: 1px solid #ccccc9; }
-  #header {
-    @include column(8, true);
-    background-color: #ccccc9;
-    height: 117px;
-    h1 {
-      float: left; }
-    img {
-      margin-left: 27px; }
-    #site-actions {
-      float: right;
-      @include horizontal-list; } }
+#header {
+  @include container; 
+/*    @include column(8, true);*/    
+  background-color: $border_color;
+  height: 117px;
+  h1 {
+    float: left; }
+  img {
+    margin-left: 27px; }
+  #site-actions {
+    float: right;
+    @include horizontal-list; 
+  }
   #leftsubheader {
     @include column(4);
-    height: 23px;
-    span {} }
+    height : 23px;
+    span {} 
+  }
   #rightsubheader {
     @include column(4, true);
     height: 23px;
-    text-align: right; }
+    text-align: right; 
+  }
   #navigation {
-    @include column(2); }
-  #main-content {
-    @include column(6, true);
-    min-height: 444px; }
-  #footer {
-    @include column(8, true);
-    span {
-      padding: 6px; }
-    #legalese {
-      @include column(4); }
-    #subscribe {
-      @include column(4, true);
-      text-align: right; } } }
+    @include column(2); 
+  }  
+}
+
+#main-content {
+  @include container;   
+/*  @include column(6, true);*/
+  border-bottom: 1px solid $border_color;  
+  background-color: yellow;   
+  min-height: 444px; 
+}
+#footer {
+  @include container;   
+/*  @include column(8, true);*/
+  margin-top: 8px;
+  border: none;
+  span {
+    padding: 6px; 
+  }
+  #legalese {
+    @include column(4); 
+  }
+  #subscribe {
+    @include column(4, true);
+    text-align: right; 
+  }
+}

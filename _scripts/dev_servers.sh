@@ -32,7 +32,7 @@ tell application "Terminal"
         try
             if get frontmost of win is true then
                 do script "cd $PATHDIR" in (selected tab of win)
-                do script "compass -w" in (selected tab of win)
+                do script "compass watch" in (selected tab of win)
             end if
         end try
     end repeat
