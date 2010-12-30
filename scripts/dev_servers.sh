@@ -13,9 +13,9 @@ tell application "Terminal"
     repeat with win in windows
         try
             if get frontmost of win is true then
-                do script "cd $PATHDIR" in (selected tab of win)
+                do script "cd $PATHDIR/jekyll" in (selected tab of win)
                 do script "clear" in (selected tab of win)
-                do script "jekyll --auto --server ./jekyll ./site" in (selected tab of win)
+                do script "jekyll --auto --server" in (selected tab of win)
             end if
         end try
     end repeat
