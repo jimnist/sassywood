@@ -29,11 +29,11 @@ task :deploy => :rsync do
   puts "TODO"
 end
 
-desc "deletes jekyll/_site"
+desc "deletes jekyll/site"
 task :delete do
-  puts "deleting _site"
-  system('rm -r jekyll/_site')
-  puts "deleting _site complete"
+  puts "deleting site"
+  system('rm -r site')
+  puts "deleting site complete"
 end
 
 desc "rsync site"

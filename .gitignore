@@ -1,6 +1,5 @@
 jekyll/stylesheets/
-jekyll/_site
-.sass-cache/
+compass/.sass-cache/
 site/
 nbproject/
 .idea/

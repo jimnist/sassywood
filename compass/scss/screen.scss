@@ -5,6 +5,7 @@
 @import "blueprint/modules/scaffolding.sass";
 @import "compass/reset.sass";
 @import "compass/utilities.sass";
+@import "blueprint/grid.sass";
 
 @include blueprint-typography(unquote("body.blueprint"));
 
@@ -23,9 +24,12 @@ body.blueprint {
   background-color: $border_color;
   height: 117px;
   h1 {
-    float: left; }
+    float: left;
+  }
   img {
-    margin-left: 27px; }
+    margin-left: 27px;
+    z-index: 999;
+  }
   #site-actions {
     float: right;
     @include horizontal-list; 
@@ -46,10 +50,11 @@ body.blueprint {
 }
 
 #main-content {
-  @include container;   
+  @include container;
+  @include showgrid;
 /*  @include column(6, true);*/
   border-bottom: 1px solid $border_color;  
-  background-color: yellow;   
+//  background-color: yellow;
   min-height: 444px; 
 }
 #footer {
