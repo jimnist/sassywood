@@ -28,26 +28,38 @@ body.blueprint {
   h1 {
     float: left;
   }
-  img {
-    margin-left: 58px;
+  .header-logo {
+    margin-left: ($blueprint_container_size - 641px) / 2;
   }
   #site-actions {
     float: right;
     @include horizontal-list; 
   }
-  #leftsubheader {
-    @include column(4);
-    height : 23px;
-    span {} 
+}
+#leftsubheader {
+  @include column(3);
+//  height : 23px;
+}
+#rightsubheader {
+  @include column(4, true);
+//  height: 23px;
+  text-align: right;
+
+  .searchform .searchfield {
+    background: #fff;
+    padding: 6px 6px 6px 8px;
+    width: 202px;
+    border: solid 1px #bcbbbb;
+    outline: none;
   }
-  #rightsubheader {
-    @include column(4, true);
-    height: 23px;
-    text-align: right; 
+  .searchform .searchbutton {
+    color: #fff;
+    border: solid 1px #494949;
+    font-size: 11px;
+    height: 27px;
+    width: 27px;
+    background: #5f5f5f;
   }
-  #navigation {
-    @include column(2); 
-  }  
 }
 
 #main-content {

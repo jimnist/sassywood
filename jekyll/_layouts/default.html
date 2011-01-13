@@ -18,7 +18,12 @@
                 <a href="/index.html"><img class="header-logo" alt="sassywood" src="/images/sassywood.png"></a>
             </div>
             <div id="leftsubheader">&nbsp;</div>
-            <div id="rightsubheader">search goes here</div>
+            <div id="rightsubheader">
+                <form class="searchform">
+                    <input class="searchfield" type="text" value="search..." onfocus="if (this.value == 'search...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'search...';}" />
+                    <input class="searchbutton" type="button" value="go" />
+                </form>
+            </div>
             <div id="main-content">{{ content }}</div>
             <div id="footer">
                 <div id="legalese"><span><a href="two_shits.html">&copy; 2010</a></span></div>

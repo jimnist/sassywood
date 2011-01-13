@@ -8,6 +8,7 @@ css_dir = "../jekyll/stylesheets"
 sass_dir = "scss"
 
 # this is the relative path and it needs to be valid both within compass and on the deployed site
+# make sure the ACTUAL images are in /jekyll/images/
 images_dir = "/images"
 
 output_style = :compact
