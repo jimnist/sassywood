@@ -22,7 +22,9 @@ body.blueprint {
   @include container; 
 /*    @include column(8, true);*/    
   background-color: $border_color;
+  overflow: visible;
   height: 117px;
+
   h1 {
     float: left;
   }

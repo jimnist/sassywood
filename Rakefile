@@ -16,9 +16,9 @@ task :run => :build do
   system('jekyll --server ./jekyll ./site')
 end
 
-desc "build _site locally"
+desc "build site locally"
 task :build => :delete do
-  puts "building jekyll/_site"
+  puts "building site"
   system('compass compile')
   system('jekyll ./jekyll ./site')
 end
@@ -29,7 +29,7 @@ task :deploy => :rsync do
   puts "TODO"
 end
 
-desc "deletes jekyll/site"
+desc "deletes site"
 task :delete do
   puts "deleting site"
   system('rm -r site')
