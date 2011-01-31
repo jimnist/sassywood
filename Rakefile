@@ -6,9 +6,10 @@
 #
 # relies on public key being set up for the user on the host
 
-USER_NAME = "git8"
-HOST_NAME = "jimnist.com"
-SITE_NAME = "sassywood.org"
+USER_NAME = "ubuntu"
+STAGING_HOST = "reggie.loco8.org"
+PRODUCTION_HOST = "einche.loco8.org"
+SITE_DIR = "/apps/sassywood"
 
 desc "build and run the site locally"
 task :run => :build do
@@ -23,12 +24,6 @@ task :build => :delete do
   system('jekyll ./jekyll ./site')
 end
 
-desc "deploy #{SITE_NAME} to AWS"
-task :deploy => :rsync do
-  puts "dev site deployed"
-  puts "TODO"
-end
-
 desc "deletes site"
 task :delete do
   puts "deleting site"
@@ -36,14 +31,28 @@ task :delete do
   puts "deleting site complete"
 end
 
-desc "rsync site"
-task :rsync => :build do
-  system("rsync -avrz site/ #{USER_NAME}@#{HOST_NAME}:#{SITE_NAME}")
-end
-
 ###
 # this (will) has tasks to publish, run the dev server, etc
 desc "run jekyll and compass dev servers"
 task :dev do
   system "./scripts/dev_servers.sh"
+end
+
+namespace :deploy do
+
+  desc "deploy sassywood to #{STAGING_HOST}"
+  task :staging => :build do
+    cmd = "rsync -avrz site/ #{USER_NAME}@#{STAGING_HOST}:#{SITE_DIR}"
+    puts cmd
+    system cmd
+    puts "staging site deployed"
+  end
+
+  desc "deploy sassywood to #{PRODUCTION_HOST}"
+  task :production => :build do
+    cmd = "rsync -avrz site/ #{USER_NAME}@#{PRODUCTION_HOST}:#{SITE_DIR}"
+    puts cmd
+    system cmd
+    puts "production site deployed"
+  end
 end
