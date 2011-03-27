@@ -9,3 +9,4 @@ TODO
 - test google analytics after deployment
 - uncomment subscribe link
 - test subscribe link after deployment
+- make copyright date dynamic
