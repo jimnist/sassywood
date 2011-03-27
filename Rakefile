@@ -7,8 +7,8 @@
 # relies on public key being set up for the user on the host
 
 USER_NAME = "deployer"
-STAGING_HOST = "reggie.loco8.org"
-PRODUCTION_HOST = "einche.loco8.org"
+REGGIE_HOST = "reggie.loco8.org"  # staging
+EINCHE_HOST = "einche.loco8.org"  # production
 SITE_DIR = "/var/sites/sassywood"
 
 desc "build and run the site locally"
@@ -40,17 +40,17 @@ end
 
 namespace :deploy do
 
-  desc "deploy sassywood to #{STAGING_HOST}"
-  task :staging => :build do
-    cmd = "rsync -avrz site/ #{USER_NAME}@#{STAGING_HOST}:#{SITE_DIR}"
+  desc "deploy sassywood to #{REGGIE_HOST}"
+  task :reggie => :build do
+    cmd = "rsync -avrz site/ #{USER_NAME}@#{REGGIE_HOST}:#{SITE_DIR}"
     puts cmd
     system cmd
     puts "staging site deployed"
   end
 
-  desc "deploy sassywood to #{PRODUCTION_HOST}"
-  task :production => :build do
-    cmd = "rsync -avrz site/ #{USER_NAME}@#{PRODUCTION_HOST}:#{SITE_DIR}"
+  desc "deploy sassywood to #{EINCHE_HOST}"
+  task :einche => :build do
+    cmd = "rsync -avrz site/ #{USER_NAME}@#{EINCHE_HOST}:#{SITE_DIR}"
     puts cmd
     system cmd
     puts "production site deployed"
