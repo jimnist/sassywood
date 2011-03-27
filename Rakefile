@@ -6,10 +6,10 @@
 #
 # relies on public key being set up for the user on the host
 
-USER_NAME = "ubuntu"
+USER_NAME = "deployer"
 STAGING_HOST = "reggie.loco8.org"
 PRODUCTION_HOST = "einche.loco8.org"
-SITE_DIR = "/apps/sassywood"
+SITE_DIR = "/var/sites/sassywood"
 
 desc "build and run the site locally"
 task :run => :build do
@@ -20,7 +20,7 @@ end
 desc "build site locally"
 task :build => :delete do
   puts "building site"
-  system('compass compile')
+  system('compass compile ./compass')
   system('jekyll ./jekyll ./site')
 end
 
