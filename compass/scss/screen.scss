@@ -1,8 +1,8 @@
 // This import applies a global reset to any page that imports this stylesheet.
-@import "blueprint/reset";
-@import "blueprint/buttons";
+// @import "blueprint/reset";
+// @import "blueprint/buttons";
 
-// To configure blueprint, edit the partials/base.sass file.
+// To configure blueprint, edit the partials/base.scss file.
 @import "partials/base";
 
 // Import all the default blueprint modules so that we can access their mixins.
@@ -13,7 +13,7 @@
 
 
 body.blueprint {
-  @include blueprint-scaffolding;
+  // @include blueprint-scaffolding;
   .container {
     @include container; 
   } 
@@ -22,7 +22,7 @@ body.blueprint {
 #header {
   @include container; 
 /*    @include column(8, true);*/    
-  background-color: $border_color;
+  background-color: $bordercolor;
   overflow: visible;
   height: 117px;
 
@@ -34,7 +34,7 @@ body.blueprint {
   }
   #site-actions {
     float: right;
-    @include horizontal-list; 
+    // @include horizontal-list; 
   }
 }
 #leftsubheader {
@@ -66,9 +66,7 @@ body.blueprint {
 #main-content {
   @include container;
   @include showgrid;
-/*  @include column(6, true);*/
-  border-bottom: 1px solid $border_color;  
-//  background-color: yellow;
+  border-bottom: 1px solid $bordercolor;  
   min-height: 444px; 
 }
 #footer {
