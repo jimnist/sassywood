@@ -1,0 +1,47 @@
+// main file for your site's css
+//
+@import "blueprint/grid";
+@import "blueprint/debug";
+
+@import "partials/base";
+@import "partials/media/debugging";
+
+// blueprint default(s), that in fact, don't change
+$blueprint-grid-margin: 10px;
+
+// size the blueprint grid here for 320px view, our default
+// values calculated using http://bgg.kematzy.com/
+//
+// grid strategy is to make the columns close to the 
+// same size for each grid width.
+//
+$blueprint-grid-columns: 5;
+$blueprint-container-size: 316px;
+
+header { 
+	margin-top: 6px;
+	@if $blueprint_debugging { background: $limon; } 
+}
+
+div[role="main"] { 
+	min-height: 300px; 
+	@if $blueprint_debugging { 
+		background: $lemon; 
+		@include showgrid; } 
+}
+
+footer { 
+	@if $blueprint_debugging { background: $orangina; } 
+}
+
+// takes care of our default size, 320
+@include set_media_options('320');
+
+// these files will override defaults and each other so that we get the 
+// right css for the viewport size
+//
+@media only screen and (min-width: 480px)  { @import "partials/media/480"; }
+@media only screen and (min-width: 600px)  { @import "partials/media/600"; }
+@media only screen and (min-width: 768px)  { @import "partials/media/768"; }
+@media only screen and (min-width: 992px)  { @import "partials/media/992"; }
+@media only screen and (min-width: 1382px) { @import "partials/media/1382"; }

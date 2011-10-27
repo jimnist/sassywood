@@ -1,0 +1,42 @@
+// this will (can) get included everywhere
+//
+@import "partials/colors";
+
+// our own variable for showing grids etc //
+$blueprint_debugging: true;
+
+// another one for media (320andup stuff) debuging //
+$media_debugging: true;
+
+
+// common things we do with the media partials
+// TODO: break this up (more)
+@mixin set_media_options($width-string) {
+  
+  // blueprint variables will be set in the media partials
+  $blueprint-grid-width: ($blueprint-container-size + $blueprint-grid-margin) / 
+                          $blueprint-grid-columns - $blueprint-grid-margin;
+
+  $blueprint-grid-outer-width: $blueprint-grid-width + $blueprint-grid-margin;
+
+	header, footer, div[role="main"] { @include container; }  
+
+	div[role="main"] { 
+		@if $blueprint_debugging { @include showgrid; } }	
+
+  @include _show_media_width_div($width-string);  		
+}
+
+
+// debugging display to show what media we are on
+@mixin _show_media_width_div($width-string) {
+    
+  #media-320, #media-480, #media-600, #media-768, #media-992, #media-1382 { 
+    display: none; }
+  
+  @if $media_debugging { 
+    #media-#{$width-string} {
+      @include container;
+      display: block;  // overrides display:none from above for just this one 
+    } }
+}
